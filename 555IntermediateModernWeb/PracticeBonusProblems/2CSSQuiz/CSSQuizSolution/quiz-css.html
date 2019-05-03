@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Quiz - Using CSS </title>
+	
+<style>
+
+div { width: 650px; margin-bottom:20px}
+
+p {width:250px;height:100px; background-color:rgba(125,0,0,.25);border:1px solid black;padding:10px}
+
+p.question, p.answer {float: left; margin-right:30px;}
+p.answer {display:none; background-color: rgba(0,200,0,.25)}
+
+p.question:hover + p.answer {display: inline-block;  }  
+ /* This is an ADJACENT SIBLING SELECTOR, it will display the answer that
+    immediately follows the question that is being hovered over */
+
+.clearfix {
+	clear:both;
+}
+
+div {
+	border: 2px dashed grey;
+}
+
+</style>
+
+</head>
+
+<body>
+	<h1>Example Quiz Reveal Using CSS</h1>
+	
+	Question 1
+	<div>
+		<p class="question">In what year did the Beatles first appear on the Ed Sullivan Show?</p>
+		<p class="answer">1964</p>
+		<br class="clearfix" />
+	</div>
+	
+	Question 2
+	<div>
+	<p class="question">Who is the fastest guitar player?</p>
+	<p class="answer">Nepali guitarist Nirvana Bista reportedly became the world's fastest guitar player by delivering the "Flight of the Bumblebee" piece at the astonishing speed of 1,600 BPM</p>
+	<br class="clearfix" />
+	</div>
+	
+	Question 3
+	<div>
+	<p class="question">How many symphonies did Beethoven compose?</p>
+	<p class="answer">he wrote nine symphonies, 32 piano sonatas, one opera, five piano concertos, and many chamber works including some ground-breaking string quartets</p>
+	<br class="clearfix" />
+	</div>
+	
+	
+</body>
+</html>

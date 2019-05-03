@@ -1,0 +1,65 @@
+h1,h2,h3,h4,h5,h6 {margin: 5px}
+
+
+.masthead{
+    color:rgb(241, 163, 248);
+    background-color: #333;
+}
+
+.masthead br {clear:both; line-height: 0}
+.masthead h3 {float:left; margin-left:20px;
+              font: 1.2em Georgia, 'Times New Roman', Times, serif}
+
+
+.masthead nav {float:right}
+
+main header {
+	color: purple;
+	margin-top:20px;
+	text-decoration-line: underline overline;
+}
+
+divq {
+	margin: 0 auto;
+	padding: 20px;
+	margin-top: 10px;
+	border: 2px solid green;
+	width: 300px;
+}
+
+p {
+	color: purple;
+}
+
+.important {
+	color: red;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: rgb(241, 163, 248);
+}
+
+a.active {
+    background-color: rgb(224, 74, 238);
+    color: white;
+}

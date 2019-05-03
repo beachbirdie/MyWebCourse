@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Solution - Make CSS changes to a box </title>
+   
+    <style>
+    
+    .outer {
+    padding: 10px;
+	margin-left: 20px;
+	float: left;
+	width: 400px;
+	height: 250px;
+	background: #ccc;
+}
+
+.inner-box {
+	padding: 10px;
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+	background: #FFF;
+
+    opacity: .5;
+    border-radius: 10px;
+	  
+	box-shadow: 10px 5px 5px grey;  
+}
+	
+.inner-box:hover {
+	    opacity: 1;
+	    color: white;
+		background: #F00;
+}
+    </style>
+</head>
+<body>
+	SOLUTION
+	<a href="../css3.html"> Click to view starting point </a>
+
+
+	<div id="container">
+		<h1>Add a hover effect to make background red and white text...</h1>
+		<div class="outer">
+			<div class="inner-box">
+				Make this box rounded, with a shadow, and 50% transparency
+			</div>
+		</div>
+	</div>
+</body>
+</html>

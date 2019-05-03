@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Used for JavaScript Demo",
+  "author": "Judy Lipinski",
+  "engines": {
+    "node": ">=0.10.28"
+  },
+  "scripts": {
+    "start": "json-server -p 3008 -w db.json"
+  },
+  "dependencies": {
+    "json-server": "^0.9.6"
+  }
+}

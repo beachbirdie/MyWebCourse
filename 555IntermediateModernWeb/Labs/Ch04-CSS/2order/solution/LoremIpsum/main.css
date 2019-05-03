@@ -1,0 +1,41 @@
+/* @import url('halloween.css'); */
+
+/* @media screen { */
+
+
+    body {
+        color: red;
+        /* font-size: 100%; */
+    }
+
+    h2 {color: green}
+
+    header {text-align: center}
+
+    nav ul li a {text-decoration:none}
+
+    header h2, #hipster h2 span {color: black}
+
+    p {color: blue}
+
+    p.two {
+        color: black;
+    }
+
+    nav a:link {color: white; background-color:red}
+    nav a:hover {color:red;background-color:white}
+
+    /* li {
+        font-variant: small-caps;
+        color:red;
+    }
+    h1 {
+        color: blue;
+        text-align: center;
+    } */
+    
+   
+   
+
+/* } */
+

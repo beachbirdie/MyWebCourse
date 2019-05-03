@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <title>Using Local Storage</title>
+    <script>	
+        var cityTextBox;
+        var colorsSelect;
+
+        window.onload = function() {
+	        cityTextBox = document.getElementById('CityTextBox');
+	        colorsSelect = document.getElementById('ColorsSelect');
+	        loadSettings();
+        };
+
+        
+        function hasLocalStorage() {
+            return ('localStorage' in window && 
+                     window['localStorage'] != null);
+        }
+        
+        function loadSettings() {
+            if (hasLocalStorage()) {
+                var city = localStorage.getItem('city');
+                var color = localStorage.getItem('color');
+                cityTextBox.value = city;
+                colorsSelect.value = color;
+            }
+        }
+        
+        function submitClick() {
+	        if (hasLocalStorage()) {
+                try {
+	                localStorage.setItem('city', cityTextBox.value);
+	                localStorage.setItem('color', colorsSelect.value);
+                    document.getElementById('message').innerHTML = 
+                            '<p>Preferences Saved!<p>';
+                } catch (e) {
+                    //can assume storage error
+                    alert('Storage quota exceeded');
+                }
+	        }
+	        else {
+		        alert('No local storage support');
+	        }
+        }
+		
+		function clearClick() {
+			colorsSelect.selectedIndex = 0;
+			if (hasLocalStorage()) {
+				localStorage.clear();
+				loadSettings();
+            }
+
+            document.getElementById('message').innerHTML = '';
+          
+		}
+
+
+       
+        
+       
+    </script>
+</head>
+<body>
+    <h2>City and Color Preferences</h2>
+    <br />
+    Favorite City: <input type="text" id="CityTextBox"/>
+    <br />
+    Favorite Color: 
+    <select id="ColorsSelect">
+        <option>Select One:</option>
+        <option>Blue</option>
+        <option>Red</option>
+        <option>Green</option>
+    </select>
+    <br /><br />
+    <button id="SubmitButton" onclick="submitClick()">Save Preferences</button>&nbsp;&nbsp;
+    <button id="ClearButton" onclick="clearClick()">Clear Preferences</button>
+    <br />
+    <span id="message"></span>
+    <script src="../../scripts/header.js"></script>
+  
+</body>
+</html>

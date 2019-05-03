@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 2's Title</title>
+    <link rel="stylesheet" href="main.css" />
+    <script>console.log('This is page 2');
+        function init() {
+            document.getElementById("output").innerHTML= new Date();
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h1>Here is Page 2</h1>
+    <div>
+        <p class="one">This is page two, do you want to go back to 
+            <a href="index.html">Page 1?</a>
+        </p>
+        <p class="two">This is paragraph two</p>
+    </div>
+    <div id="output"></div>
+</body>
+</html>
+

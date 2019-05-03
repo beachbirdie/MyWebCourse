@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../scripts/jquery.js"></script>
+	
+    <script>
+    $(document).ready(function() {
+        $("p.question1").click(function(){
+					$("p.answer1").show();
+		});
+
+        $("p.question1").contextmenu(function (e) {
+            e.preventDefault();
+            $("p.answer1").hide();
+        });
+
+        //$('p.question1').off('contextmenu');  
+
+        $("p.question2").mousedown(function (event) {
+            switch (event.which) {
+                case 1: $("p.answer2").show(); break;
+                case 2: alert('Middle Mouse button pressed.'); break;
+                //case 2: ; break;
+                case 3: $("p.answer2").hide(); break;
+                default: alert('You have a strange mouse!');
+            }
+        });
+
+    });
+    </script>
+
+    <style>
+        div {
+            width: 650px;
+            margin-bottom: 20px
+        }
+        
+        p {
+            width: 250px;
+            height: 100px;
+            background-color: rgba(125, 0, 0, .25);
+            border: 1px solid black;
+            padding: 10px
+        }
+        
+        p.question,
+        p.answer {
+            float: left;
+            margin-right: 30px;
+        }
+        
+        p.answer {
+            display: none;
+            background-color: rgba(0, 200, 0, .25)
+        }
+    </style>
+</head>
+
+<body>
+    Question 1
+    <div>
+        <p class="question question1">In what year did the Beatles first appear on the Ed Sullivan Show?</p>
+        <p class="answer answer1">1964</p>
+        <br style="clear:both">
+    </div>
+
+    Question 2
+    <div>
+        <p class="question question2">Who is the fastest guitar player?</p>
+        <p class="answer answer2">Nepali guitarist Nirvana Bista reportedly became the world's fastest guitar player by delivering the "Flight of the
+            Bumblebee" piece at the astonishing speed of 1,600 BPM</p>
+        <br style="clear:both">
+    </div>
+
+
+</body>
+
+</html>

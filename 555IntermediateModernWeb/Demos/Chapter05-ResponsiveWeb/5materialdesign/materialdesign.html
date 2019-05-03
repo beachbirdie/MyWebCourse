@@ -1,0 +1,68 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web/dist/material-components-web.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    
+    <style>
+        button {
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <script>
+        const buttons = document.querySelectorAll('.mdc-button');
+        for (const button of buttons) {
+            mdc.ripple.MDCRipple.attachTo(button);
+        }
+    </script>
+</head>
+
+<body>
+    <button class="foo-button mdc-button">Button</button>
+    <br />
+
+    <button class="bar-button mdc-button">
+        <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
+        Favorite
+    </button>
+
+    <br />
+
+    <button class="button0 mdc-button mdc-button--dense">
+        <i class="material-icons mdc-button__icon" aria-hidden="true">edit</i>
+        Dense button
+    </button>
+
+    <br />
+
+    <button class="button1 mdc-button mdc-button--unelevated">
+        Unelevated
+    </button>
+
+    <br />
+
+    <button class="button2 mdc-button mdc-button--outlined">
+        <i class="material-icons mdc-button__icon" aria-hidden="true">save</i>
+        Outline
+    </button>
+
+    <br />
+
+
+    <button class="button3 mdc-button mdc-button--raised">
+        <i class="material-icons mdc-button__icon" aria-hidden="true">sync</i>
+        Raised
+    </button>
+
+
+    <script src="https://unpkg.com/material-components-web/dist/material-components-web.min.js"></script>
+</body>
+
+</html>

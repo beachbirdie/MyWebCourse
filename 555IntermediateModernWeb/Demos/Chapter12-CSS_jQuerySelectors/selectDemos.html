@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ch11 Demos</title>
+	
+	<script src="../scripts/jquery.js"></script>
+	
+	<style>
+		tr:odd {
+			color: pink
+		}
+	</style>
+	<script>
+
+
+		$(document).ready(function () {
+
+
+			$("#changeBlue").click(function () {
+				$(this).css('background-color', 'lightblue');
+			});
+
+			$(".colorPink").css('color', 'pink');
+
+
+
+			$('div:contains("Inc")').css('font-size', 'small');
+
+			$("td.favorites").css('background-color', 'red');
+
+			$('li').css('color', 'red');
+
+			$('tr:odd').css('background-color', 'grey');
+
+			$('div > span').css('color', 'green');
+
+			$('input[value^="Submit"]').css('color', 'purple');
+
+			$('span:first-child').css('color', 'blue');
+
+			$('div').css('border', '1px solid blue');
+
+
+		});
+	</script>
+</head>
+
+<body>
+	<hr />
+	<button id="changeBlue">Change To Blue</button>
+	<input type="button" value="Submit Events" />
+	<input type="button" value="Form Submit" />
+	<input type="button" value="Submit Report" />
+	<hr />
+	<div>Food, INC.</div>
+	<div>Astoria, Illinois is Incorporated</div>
+	<div>Chrysler LLC</div>
+	<div>Apple, Inc.</div>
+	<hr />
+	<pre>
+	
+	
+	
+	</pre>
+	<table style="width: 200px; border: 1px solid black;">
+		<tr>
+			<th>Artist</th>
+			<th>Genre</th>
+		</tr>
+		<tr>
+			<td class="favorites">Stevie Wonder</td>
+			<td>Soul</td>
+		</tr>
+		<tr>
+			<td class="favorites">Les Claypool</td>
+			<td>Funk Metal</td>
+		</tr>
+		<tr>
+			<td>Stevie Nicks</td>
+			<td>Pop Rock</td>
+		</tr>
+		<tr>
+			<td>Amos Lee</td>
+			<td>Soul</td>
+		</tr>
+	</table>
+	<pre>
+	
+	
+	
+	</pre>
+	<p>Table with no header</p>
+	<table style="width: 200px; border: 1px solid black;">
+		<tr>
+			<td>Java</td>
+			<td>Oracle</td>
+		</tr>
+		<tr>
+			<td>iOS</td>
+			<td>Apple</td>
+		</tr>
+		<tr>
+			<td>Swift</td>
+			<td>Apple</td>
+		</tr>
+	</table>
+	<hr />
+</body>
+
+</html>

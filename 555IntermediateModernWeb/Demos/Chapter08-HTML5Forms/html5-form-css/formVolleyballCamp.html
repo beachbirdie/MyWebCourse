@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Forms Complete Example</title>
+<style>
+body {
+	margin: 2em 5em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1, legend {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+label, input, textarea, select {
+	display: block;
+	margin-bottom:20px;
+}
+
+input, select {
+	margin-bottom: 1em;
+}
+
+fieldset {
+	margin-bottom: 2em;
+	padding: 1em;
+}
+
+fieldset fieldset {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+input[type="checkbox"] {
+	display: inline;
+}
+
+.range {
+	margin-bottom: 1em;
+}
+
+.card-type input, .card-type label {
+	display: inline-block;
+}
+</style>
+</head>
+<body>
+
+
+
+
+	<form id="register">
+		<h1>Register for Volleyball Training Camp</h1>
+		<fieldset>
+			<legend>Personal details</legend>
+
+			<div>
+				<label>First Name * <input id="given-name" name="given-name"
+					type="text" placeholder="First name only" required autofocus>
+				</label>
+			</div>
+
+			<div>
+				<label>Last Name * <input id="family-name"
+					name="family-name" type="text" placeholder="Last name only"
+					required autofocus>
+				</label>
+			</div>
+			<div>
+				<label>Date of Birth * <input id="dob" name="dob"
+					type="date" required>
+				</label>
+			</div>
+			<div>
+				<label>Email * <input id="email" name="email" type="email"
+					placeholder="example@domain.com" required>
+				</label>
+			</div>
+
+			<div>
+				<label>Password * 
+				   <input name="password" type="password" required autocomplete="false">
+				</label>
+			</div>
+
+			<div>
+				<label>Repeat Password * <input name="password" type="password" required autocomplete="false">
+				</label>
+			</div>
+
+			<div>
+				<label>URL <input id="url" name="url" type="url"
+					placeholder="http://mysite.com">
+				</label>
+			</div>
+			<div>
+				<label for="phone">Phone:</label> <input type="tel" name="phone"
+					placeholder="555-555-5555" required
+					pattern="^((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}?"
+					/>                                   
+			</div>
+
+			<div style="margin-top:25px">
+				<label>Shoesize <input id="shoes" name="shoes" type="number"
+					min="5" max="18" step="0.5" value="9">
+				</label>
+			</div>
+
+			<div>
+				<label for="skillInputId">Skill Level (1 novice, 10 expert)</label>
+				<input style="float: left" id="skillInputId" name="skill"
+					type="range" min="0" max="10" step="1" value="5"
+					oninput="skillOutputId.value = skillInputId.value">
+				<output style="display: inline; margin-left: 10px"
+					name="ageOutputName" id="skillOutputId">5</output>
+			</div>
+
+		</fieldset>
+		<fieldset>
+			<legend>Billing address</legend>
+			<div>
+				<label>Address * <textarea id="address" name="address"
+						rows=5 required></textarea>
+				</label>
+			</div>
+			<div>
+				<label>Postal code * <input id="postCode" name="postCode"
+					type="text" required>
+				</label>
+			</div>
+			<div>
+				<label>Country * <input id="country" name="country"
+					list="country-names" type="text" required> <datalist
+						id="country-names">
+						<option label="England" value="England"></option>
+						<option label="Northern Ireland" value="Northern Ireland"></option>       
+						<option label="Ireland" value="Ireland"></option>
+						<option label="Scotland" value="Scotland"></option>
+						<option label="Wales" value="Wales"></option>
+					</datalist>
+				</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Card details</legend>
+			<fieldset>
+				<legend>Card type</legend>
+				<div class="card-type">
+					<input id="visa" name="cardtype" type="radio"> <label
+						for="visa">VISA</label> <input id="mastercard" name="cardtype"
+						type="radio"> <label for="mastercard">Mastercard</label> <input
+						id="amex" name="cardtype" type="radio"> <label for="amex">AMEX</label>
+				</div>
+			</fieldset>
+			<div>
+				<label>Name * <input size="50" id="cardName" name="cardName"
+					type="text" placeholder="Name as it appears on your card" required>
+				</label>
+			</div>
+			<div>
+				<label>Card number * <input id="cardNo" width="80"
+					name="cardNo" type="number" min=1000000000000000
+					max=9999999999999999 required
+					title="The sixteen digit number across the middle of your card.">
+				</label>
+			</div>
+			<div>
+				<label>Security code * <input id="security" name="security"
+					type="number" required pattern="[0-9]{3}"
+					title="The last three digits on the back of your card.">
+				</label>
+			</div>
+			<div>
+				<label>Expiry Date <input id="expiry" name="expiry"
+					type="month">
+				</label>
+			</div>
+		</fieldset>
+		<div>
+			<button type=submit>Place Order</button>
+		</div>
+
+	</form>
+	
+	
+</body>
+</html>

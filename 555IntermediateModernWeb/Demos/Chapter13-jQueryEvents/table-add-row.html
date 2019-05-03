@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Dialog - Modal form</title>
+    <style>
+    </style>
+    <script src="../scripts/jquery.js"></script>
+	
+    <script>
+        let rowCount = 1;
+        let delegatedRowCount = 1;
+
+        $(function () {
+            $("#add-row").click(function () {
+                var table = document.getElementById("without-on");
+                var row = table.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = ++rowCount;
+                cell2.innerHTML = new Date();
+            })
+
+            $("#without-on tr").click(function(){
+                $(this).css('background-color','pink');
+            });
+
+             $("#add-delegated-row").click(function () {
+                var table = document.getElementById("with-on");
+                var row = table.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = ++delegatedRowCount;
+                cell2.innerHTML = new Date();
+            })
+
+             $("#with-on").on("click","tr", function(){
+                $(this).css('background-color','yellow');
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <h2>Table without ON for delegation:</h2>
+
+    <p>Add rows in each, click rows in each</p>
+    <table id="without-on">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>asdawd</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="add-row">Add Rows</button>
+
+    
+    <h2>Table using ON for delegation:</h2>
+    <table id="with-on">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>asdawd</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="add-delegated-row">Add Rows</button>
+
+    
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Semantic Tags</title>
+<style>
+#pageSection {
+	margin-top: 30px;
+}
+
+aside {
+	float:left;
+	border: 1px solid blue;
+	background-color: pink;
+	width: 150px;
+	height:100px;
+	margin-right: 10px;
+}
+
+footer#pageFooter {
+	clear:both;
+	margin-top:10px;
+	padding-top:20px;
+}
+
+section {
+	float: left;
+	
+}
+
+header {
+	font-weight: bold;
+	margin-bottom:10px
+}
+
+#pageHeader {
+	border-bottom: 2px solid grey;
+	padding-bottom: 25px;
+}
+
+footer {
+	margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+	<h1>Semantic Tags using &lt;mark&gt;</h1>
+	<header id="pageHeader">
+		<nav>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">Products</a></li>
+				<li><a href="">Services</a></li>
+			</ul>
+		</nav>
+		Search:
+	<input type="search" value="article" />
+		
+	</header>
+
+	
+	
+	<section id="pageSection">
+		<header class="sectionHeader">
+			This is a header for the
+			<mark>article</mark>
+		</header>
+		<aside id="pageAside">
+		This
+		<mark>article</mark> talks of pirates, did you know the flying spaghetti monster connection with pirates? blah blah
+	</aside>
+		<article class="sectionArticle">
+			This is the
+			<mark>article</mark>
+			itself. Blah blah blah...
+				Yawl Corsair prow topgallant list rope's end spyglass brigantine ye bilge water. Spirits jolly boat six pounders bounty boom hearties scurvy chantey Chain Shot scourge of the seven seas. Stern handsomely belay lugsail barkadeer Gold Road Pieces of Eight flogging clap of thunder hail-shot.
+	
+		</article>
+		<footer class="sectionFooter">
+			This
+			<mark>article</mark>
+			was written by Pirate Ipsum
+		</footer>
+	</section>
+	
+	<footer id="pageFooter">The footer for the entire page.
+		Copyright &copy;</footer>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON.parse with reviver</title>
+</head>
+<body>
+
+<h2>JSON.parse with reviver</h2>
+
+<p id="demo">View Console</p>
+
+<script>
+	
+	
+	var data = '{"name": { "first":"John","last":"Herilla"},' +
+				'"email": "","phone": "555-1212"}';
+	var o1 = JSON.parse(data);
+	console.log(o1);
+	
+	
+	var o = JSON.parse(data, function(k, v) {
+	  if (k === '') { return v; } // if topmost value, return it,
+	  console.log(k);
+	  if (v =='') {
+		  return "unknown";               
+	  }
+	  else return v ;
+		
+	}); 
+	console.log(o);
+	
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="../scripts/jquery.js"></script>
+	 
+ 
+ 
+ <style>
+div:not(#toggle-states ) {
+	width: 100px;
+	height: 100px;
+	display: none;
+}
+</style>
+<script>
+	$(document).ready(
+			function() {
+
+				$("button#q1").click(function() {
+					$("p#answer1").text(42*42).show();
+				});
+				
+				$("button#q1").dblclick(function() {
+					$("p#answer1").hide();
+				});
+
+				$("button#q2").click(function() {
+					$("p#answer2").text(12*12).show("slow");
+				});
+				
+				$("button#q2").dblclick(function() {
+					
+					$("p#answer2").hide("slow");
+				});
+
+				$("button#toggle-button").click(function() {
+					$("div#toggle-div").toggle();
+				});
+				
+			 	
+				
+				$( "#fade-in-cover" ).click(function() {
+					  $( "#album-cover" ).fadeIn( "slow", function() {
+						  $( "#fade-in-cover" ).hide();
+						  $( "#fade-out-cover" ).show();
+					  });
+					});
+				 
+				$( "#fade-out-cover" ).click(function() {
+					  $( "#album-cover" ).fadeOut( "slow", function() {
+						  $( "#fade-out-cover" ).hide();
+						  $( "#fade-in-cover" ).show();
+					  });
+					}); 
+				 
+				 
+				
+
+				$(".slideDownbox").click(function () {
+				   $(this).hide().slideDown('slow');
+				});
+
+				$(".slideUpbox").click(function () {
+				   $(this).slideUp(2000);
+				});
+
+				$("#slideToggle").click(function () {
+				   $('.slideTogglebox').slideToggle();
+				});
+
+				$("#reset").click(function(){
+					location.reload();
+				});
+				
+				 
+			});
+</script>
+
+</head>
+<body>
+
+	<button id="q1">What is 42 multiplied by 42?</button>
+	<p id="answer1" style="display: none"></p>
+
+	<pre>
+	
+	</pre>
+
+	<button id="q2">What is 12 multiplied by 12?</button>
+	<p id="answer2" style="display: none"></p>
+
+	<pre>
+	
+	</pre>
+	<button id="toggle-button">Toggle me</button>
+	<div id="toggle-div">Hello Again!</div>
+
+	
+
+	<div id="toggle-album-cover">Toggle Album Cover</div>
+
+<hr />
+
+	<div id="fade-in-cover">Fade In Album Cover</div>
+	<div style="display:none" id="fade-out-cover">Fade Out Album Cover</div>
+	<img style="display:none" id="album-cover" src="album-cover.png">
+	
+	
+	
+	<h2>slideDown() example</h2>
+	
+	<div class="slideDownbox">
+		Click me - slideDown()
+	</div>
+	
+	<div class="slideDownbox">
+		Click me - slideDown()
+	</div>
+	
+<h2>slideUp() example</h2>
+	
+	<div class="slideUpbox">
+		Click me - slideUp()
+	</div>
+	
+	<div class="slideUpbox">
+		Click me - slideUp()
+	</div>
+
+
+<div class="clear">
+	<button id=reset>Reset</button>
+</div>
+
+
+
+<div class="clear">
+	<h2>slideToggle() example</h2> <button id=slideToggle>slideToggle()</button>
+	<br/>
+	<div class="slideTogglebox">
+	 	slideToggle()
+	</div>
+	
+	<div class="slideTogglebox">
+	 	slideToggle()
+	</div>
+	
+</div>
+
+
+
+</body>
+</html>

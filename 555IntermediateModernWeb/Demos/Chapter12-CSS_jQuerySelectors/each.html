@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery.js"></script>
+	
+</head>
+
+<body>
+    <p>Some par</p>
+    <p class="answer">Another with answer</p>
+    <script>
+        $(document).ready(function () {
+            $.each([22, 10, 42, 19], function (index, value) {
+                console.log(index + ": " + value);
+            });
+
+            var band = {
+                "name": "U2",
+                "Country": "Ireland"
+            };
+            
+            $.each(band, function (key, value) {
+                console.log(key + ": " + value);
+            });
+
+           
+
+
+        });
+
+    </script>
+</body>
+
+</html>

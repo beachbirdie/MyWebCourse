@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Using the Canvas</title>
+    <script>
+        function init() {
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');
+
+            //Draw rectangle
+            ctx.fillStyle = 'Blue';
+            ctx.fillRect(10, 10, 100, 50);
+            ctx.closePath();
+
+            ctx.beginPath();
+            //Draw circle
+            ctx.arc(60, 125, 50, 0, 2 * Math.PI, false);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.closePath();
+
+
+            ctx.beginPath();
+            //Draw triangle
+            ctx.moveTo(275, 35);
+            ctx.lineTo(110, 60);
+            ctx.lineTo(110, 10);
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.beginPath();
+
+            //Draw circle
+            ctx.moveTo(200, 70);
+            ctx.arc(200, 125, 50, 0, 2 * Math.PI, true);
+            ctx.fillStyle = "green";
+            ctx.fill();
+
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <canvas id="canvas" width="800" height="400"></canvas>
+</body>
+
+</html>

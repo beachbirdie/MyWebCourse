@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Three ways to include CSS</title>
+    <style>
+        body, header {padding:10px}
+        div h2 {
+            color: pink;
+            background-color: black;
+            border: 3px solid purple
+        }
+
+        header {
+            width: 400px;
+            border: 1px solid purple
+        }
+
+        header h2, 
+        header span {color: purple; 
+                     font-weight:bold}
+
+        h1, h2 {color: red}
+
+        div p {color: blue}
+    </style>
+</head>
+
+<body>
+    <h1>Practicing CSS</h1>
+    <h2>Introduction</h2>
+    <p>Let's practice!</p>
+    <section>
+        <header>
+            <h2>Descendant Selectors</h2>
+            <p>Descendants can be 
+                <span>great-great-</span>grandchildren</p>
+            <aside>19 US Presidents are related 
+                to England's King Edward III</aside>                  
+        </header>
+    </section>
+    <div>
+        <p>This paragraph is in a div,
+            how to make it blue?</p>
+    </div>
+    <p>Dont make this blue</p>
+
+</body>
+
+</html>

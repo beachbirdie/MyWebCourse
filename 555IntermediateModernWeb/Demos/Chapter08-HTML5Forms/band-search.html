@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        label.inline-block {
+            display: inline-block;
+            width: 100px
+        }
+
+        input {
+            margin-left: 23px
+        }
+
+        input[type="submit"] {
+            display: block;
+            margin: 10px auto;
+        }
+
+        div {
+            width: 300px;
+            margin: 0 auto
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/api/lookupBand" method="GET">
+        <div>
+            <h1>Search for a band</h1>
+            <label>
+                Band Name
+                <input type="text" >
+            </label>
+            <label class="inline-block" for="genre">Genre</label>          
+            <select id="genre">
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="hiphop">HipHop</option>
+            </select>
+            <input type="submit" value="search">
+        </div>
+    </form>
+
+
+
+</body>
+
+</html>

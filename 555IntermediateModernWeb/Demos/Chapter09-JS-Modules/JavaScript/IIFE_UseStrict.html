@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo of IIFE and Use Strict</title>
+</head>
+
+<body>
+    <script>
+        (function (x) {
+            
+            var myConstantVars = {
+                xval: x,
+                pi: 3.14
+            }
+
+            setTimeout(function () {
+                alert(myConstantVars.xval); }, 3000); 
+
+        }(22.5));
+    </script>
+
+    
+    <script>
+       // 'use strict'
+</script>
+    <script src="setX.js"></script>
+    <script>
+       // 'use strict'
+        var myConstantVars = {
+            xval: x,
+            pi: 3.14
+        }
+
+        xval = 3;
+        
+        x = 'Hello';
+
+        console.log('xval is ' + myConstantVars.xval);
+        myConstantVars = { pi: 3.1};
+       
+        
+        console.log('now xval is ' + myConstantVars.xval);
+    </script> 
+    Hello
+</body>
+
+</html>

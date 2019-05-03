@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Events</title>
+	<script src="../scripts/jquery.js"></script>
+	
+<style>
+	.over{background-color:#00FF99}
+
+</style>
+<script>
+	
+	$(document).ready(function() {
+		//click
+		$("#my-id").click(function() { 
+			console.log('The element my-id was clicked'); 
+		});
+
+		$("p").click(function(e) { 
+			   console.log(e.currentTarget);
+		});
+		
+		//keyup
+		$("#name-text-box").keyup(function(e) { 
+			 console.log('You pressed ' + e.which);
+		});
+		
+		$("#email-text-box").on('click', function() {
+			console.log('You clicked in the email textfield, and now the event is gone');
+			$("#email-text-box").off();
+		  });
+		
+		$("#phone-text-box").on('click', function() {
+			console.log('You clicked in the phone, and now the event is gone');
+			$("#phone-text-box").off();
+		  });
+		
+		$("#button1").on('click', function() {
+			console.log('Logging button1 ');
+		});
+		
+		$("#button1").on('dblclick', function() {
+			$("#button1").css("color","red");
+		});
+		
+		$("#button2").on('click', function() {
+			console.log('turning off click for button 1');
+			$("#button1").off('click'); //turn off all click events
+		});
+		
+		$("#button3").on('click', function() {
+			console.log('turning off all events');
+			$("#button1").off(); //turn off all events
+			$("#button1").css("color","black");
+		  });
+		
+		$("#email-text-box").on('cut copy paste', function(e) {
+			e.preventDefault();
+			alert('Cut/Copy/Paste is disabled for this textbox.');
+		});
+
+		$("#hover-here").hover(
+				function(){
+				    $(this).css("background-color", "#00FF99");
+			    },
+				function(){
+				    $(this).css("background-color", "#FFFFFF");
+			    }
+			);
+
+		$("#toggle-hover").hover(function() { 
+		    $(this).toggleClass('over'); 
+		});
+		
+	});
+</script>
+	
+</head>
+<body>
+	<h1>Demo of events - view console for results</h1>
+	<ul>Actions 
+		<li>Click the 1. paragraph below - one message</li>
+		<li>Click the 2. paragraph below - two message</li>
+		<li>Type in the name text box to see console.log('You pressed ' + e.which); </li>
+		<li>Click the email and phone text boxes - one time events</li>
+		<li>Click button one - view message</li>
+		<li>Double click button one - see color</li>
+		<li>Click button two, now try to click 1 again</li>
+		<li>Click button three 3 and all button events are gone</li>
+	</ul>		
+
+	<p>1. Click this paragraph - one message</p>
+	<p id="my-id">2. Click me and look in console, 2 messages </p>
+	
+	Name: <input id="name-text-box" type="text" /> <br />
+	Email: <input id="email-text-box" type="text" /> <br />
+	Phone: <input id="phone-text-box" type="phone" /> <br />
+	<br /><hr>
+	<button id="button1">Button1 - click and double click me</button>
+	<button id="button2">Turn off Click for Button 1</button>
+	<button id="button3">Turn off All for button 1</button>
+	<br /><hr>
+	<div id="hover-here">Hover here</div>
+	<br /><hr>
+	<div id="toggle-hover">Toggle Hover</div>
+	<br /><hr>
+
+	
+	
+	
+	
+</body>
+</html>

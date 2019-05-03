@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <title>Using Local Storage</title>
+    <script>	
+        let bandTextBox;
+        let genreSelect;
+        let output;
+
+        window.onload = function() {
+            bandTextBox = document.getElementById('bandTextBox');
+            genreSelect = document.getElementById('genreSelect');
+            output = document.getElementById('output');
+            loadData();
+        };
+
+        function hasLocalStorage() {
+            return ('localStorage' in window && window['localStorage'] != null);
+        }
+
+        function saveData() {
+            if (hasLocalStorage()) {
+                try {
+                    localStorage.setItem('band', bandTextBox.value);
+                    localStorage.setItem('genre', genreSelect.value);                           
+                    output.innerHTML = "Data saved successfully"
+                }
+                catch (e) {
+                    //can assume storage error
+                    alert('Storage quota exceeded');
+                }
+            }
+            else {
+                alert('No local storage support');
+            }
+        }
+        
+
+        function loadData() {
+            if (hasLocalStorage()) {
+                var band = localStorage.getItem('band');
+                var genre = localStorage.getItem('genre');
+                bandTextBox.value = band;
+                genreSelect.value = genre;
+                output.innerHTML ="";
+            }
+        }
+
+        function clearSavedData() {
+			genreSelect.selectedIndex = 0;
+			if (hasLocalStorage()) {
+				localStorage.clear();
+                loadData();
+                output.innerHTML ="";
+			}
+        }
+
+       
+
+    </script>
+</head>
+<body>
+    <h2>Storing Favorite Music Info in Local Storage</h2>
+    <br />
+    Favorite Band: <input type="text" id="bandTextBox"/>
+    <br />
+    Favorite Genre: 
+    <select id="genreSelect">
+        <option>Select One:</option>
+        <option>Rock</option>
+        <option>Blues</option>
+        <option>Alternative</option>
+        <option>Classical</option>
+ 
+    </select>
+    <br />
+    <button id="save-button" onclick="saveData()">Save Info</button>&nbsp;&nbsp;
+    <button id="clear-button" onclick="clearSavedData()">Clear Info</button>
+    <br />
+    <span id="output"></span>
+</body>
+</html>

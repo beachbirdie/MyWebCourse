@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Combinators</title>
+
+<style>
+input: ~ label {
+	padding-left: 20px;
+}
+
+h1+h2 {
+	color: red
+}
+
+h1 ~ h2 {
+	font-style: italic
+}
+
+body>span {
+	color: orange;
+}
+</style>
+
+</head>
+<body>
+
+	<h1>Page Title h1</h1>
+	<h2>An h2 - Could be a summary of what is to come</h2>
+	<p>some words in a paragraph</p>
+
+	<p>
+		<span>**Im a span, child of paragraph**</span>
+	</p>
+	<span>**Im a span, child of body**</span>
+
+	<h2>Another h2, could be a continuation</h2>
+	<p>some words in a paragraph</p>
+	<p>some words in a paragraph</p>
+
+	<hr />
+
+
+	<form action="url_of_form">
+		<label for="name">Name field (disabled):</label> <input type="text"
+			id="name" value="William Shatner" disabled="disabled"><br />
+		<label for="email">Email field (enabled):</label> <input type="text"
+			id="email" value="changeme@email.com"><br /> <input
+			type="checkbox" /><label>Learn HTML5</label><br /> <input
+			type="checkbox" /><label>Learn CSS3</label><br /> <input
+			class="dontstyleme" type="checkbox" /><label>Take a break</label><br />
+		<input type="button" value="Submit" />
+	</form>
+
+
+</body>
+</html>

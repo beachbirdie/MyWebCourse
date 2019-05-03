@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function onButtonDown (button) {
+            button.style.color = "#ff0000";
+        }
+        function onButtonUp (button) {
+            button.style.color = "#000000";
+        }
+
+        function init () {
+            var button = document.getElementById ("testButton");
+            if (button.addEventListener) {  // all browsers except IE before version 9
+                button.addEventListener ("mousedown", function () {onButtonDown (button)}, false);
+                button.addEventListener ("mouseup", function () {onButtonUp (button)}, false);
+            }
+            else {
+                if (button.attachEvent) {   // IE before version 9
+                    button.attachEvent ("onmousedown", function () {onButtonDown (button)});
+                    button.attachEvent ("onmouseup", function () {onButtonUp (button)});
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="init ()">
+    Click on the following button and see its text color.
+    <br />
+    <button id="testButton">Test button</button>
+</body>
+</html>

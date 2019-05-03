@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<!-- <script src="../../../scripts/includeJQ.js"></script> -->
+	<script>
+		$(function () {
+
+			$("p").css('font-weight', 'bold');
+
+			$("#artists").css('color', 'red');
+
+			$(".favorite").css('background-color', 'yellow');
+
+			console.log($("body").jquery);
+
+		});
+
+	</script>
+</head>
+
+<body>
+	<p>Things I Like to Do</p>
+	<ul>
+		<li>Wash Car</li>
+		<li>Finish Taxes</li>
+		<li class="favorite">Vote</li>
+	</ul>
+	<p>Things I DO NOT Like to Do</p>
+	<ul>
+		<li>Wash Dishes</li>
+		<li>Start Taxes</li>
+		<li>Go to the DMV</li>
+	</ul>
+	<table id="artists">
+		<tr>
+			<th>Artist</th>
+			<th>Genre</th>
+		</tr>
+		<tr>
+			<td>Stevie Wonder</td>
+			<td>Soul</td>
+		</tr>
+		<tr class="favorite">
+			<td>Les Claypool</td>
+			<td>Funk Metal</td>
+		</tr>
+		<tr>
+			<td>Stevie Nicks</td>
+			<td>Pop Rock</td>
+		</tr>
+		<tr>
+			<td>Amos Lee</td>
+			<td>Soul</td>
+		</tr>
+	</table>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Border Effects</title>
+
+<style>
+
+div {   border: 1px solid black;
+		padding:10px;
+		width: 500px;
+		height:50px}
+
+
+
+#box1 { /* Radius is set for all 4 sides */
+border-radius: 10px;
+}
+
+#box2 { /* top-left-and-bottom-right | top-right-and-bottom-left */
+border-radius: 10px 5%;
+}
+
+#box3 { /* top-left | top-right-and-bottom-left | bottom-right */
+border-radius: 2px 4px 2px;
+}
+
+#box4 { /* top-left | top-right | bottom-right | bottom-left */
+border-radius: 1px 0 3px 4px;
+}
+
+#box5 { /* top-left-and-bottom-right | top-right-and-bottom-left */
+border-radius: 10px 5%;
+}
+
+#box6 { /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
+border-radius: 10px 5% / 20px 30px;
+}
+
+#box7 { /* (first radius values) / top-left | top-right-and-bottom-left | bottom-right */
+border-radius: 10px 5px 2em / 20px 25px 30%;
+}
+
+#box8 { /* (first radius values) / top-left | top-right | bottom-right | bottom-left */
+border-radius: 10px 5% / 20px 25em 30px 35em;
+}
+
+
+</style>
+
+</head>
+<body>
+
+	<h1>Border Effects</h1>
+
+<hr />
+
+	<div id="box1">Box 1:<br/>Radius is set for all 4 sides <br/>border-radius: 10px;</div>
+	<br />
+	<div id="box2">Box 2:<br/>top-left-and-bottom-right | top-right-and-bottom-left<br/>
+	 border-radius: 10px 5%;</div>
+	<br />
+	<div id="box3">Box 3:<br/>top-left | top-right-and-bottom-left | bottom-right<br/> border-radius: 2px 4px 2px;</div>
+	<br />
+	<div id="box4">Box 4:<br/>top-left | top-right | bottom-right | bottom-left<br/> border-radius: 1px 0 3px 4px;</div>
+	<br />
+	<div id="box5">Box 5:<br/>top-left-and-bottom-right | top-right-and-bottom-left<br/> border-radius: 10px 5%;</div>
+	<br />
+	<div id="box3">Box 6:<br/>(first radius values) / top-left-and-bottom-right | top-right-and-bottom-left<br/> border-radius: 10px 5% / 20px 30px;</div>
+	<br />
+	<div id="box4">Box 7:<br/>(first radius values) / top-left | top-right-and-bottom-left | bottom-right<br/> border-radius: 10px 5px 2em / 20px 25px 30%;</div>
+	<br />
+	<div id="box5">Box 8:<br/>(first radius values) / top-left | top-right | bottom-right | bottom-left<br/> border-radius: 10px 5% / 20px 25em 30px 35em;</div>
+	<br />
+
+</body>
+</html>

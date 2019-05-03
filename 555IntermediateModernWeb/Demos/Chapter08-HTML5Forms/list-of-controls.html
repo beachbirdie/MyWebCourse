@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        First name:
+        <input type="text" name="firstname" tabindex="1"> Middle Initial:
+        <input type="text" name="middleinitial" size="1" maxlength="1">
+        <br /> Last name:
+        <input type="text" name="lastname" tabindex="2">
+    </form>
+
+
+    <form>
+        <input type="radio" name="answer" value="yes" checked tabindex="3"> Yes
+        <br />
+        <input type="radio" name="answer" value="no"> No
+        <br />
+        <input type="radio" name="answer" value="other"> Other
+    </form>
+
+    <form>
+        <input type="radio" name="answer" value="yes"> Yes
+        <br />
+        <input type="radio" name="answer" value="no"> No
+        <br />
+        <input type="radio" name="answer" value="other"> Other
+    </form>
+
+    <form>
+        <input type="checkbox" name="preferredTimes" value="am"> a.m.
+        <br />
+        <input type="checkbox" name="preferredTimes" value="pm"> p.m.
+        <br />
+    </form>
+
+
+
+    <form action="/submitform" method="get" target="_blank">
+        Username
+        <input type="text" disabled="disabled" value="admin">
+        <br /> First name:
+        <input type="text" name="firstname" tabindex="5">
+        <br /> Last name:
+        <input type="text" name="lastname" tabindex="6">
+        <br />
+        <input type="submit" value="Submit" disabled>
+    </form>
+
+   
+    <form>
+        <label>
+
+            First Name:
+            <input type="text" name="fname" tabindex="9" />
+
+        </label>
+        <br/>
+        <br/>
+        <br/>
+
+        <label for="lname">Last Name</label>
+        <input id="lname" type="text" name="fname" tabindex="10" />
+
+        <br />
+
+        <label>
+            Enter lots of text here:
+            <br />
+            <textarea name="textarea" rows="3" cols="30" tabindex="11">Default Text here</textarea>
+        </label>
+    </form>
+
+
+</body>
+
+</html>

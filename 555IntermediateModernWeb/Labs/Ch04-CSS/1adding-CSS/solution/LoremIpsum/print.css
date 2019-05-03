@@ -1,0 +1,7 @@
+@media print {
+    header, footer, nav {display:none;}
+    
+    
+    .site-description {display:none;}
+    .site-title {display:none;}
+}

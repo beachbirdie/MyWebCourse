@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html >
+
+<html>
+<head>
+    <title>Using Session Storage</title>
+    <script>
+        var submitButton, clearButton, nameTextBox, statesSelect, outputSpan;
+
+        window.onload = function() {
+            submitButton = document.getElementById('submitButton');
+            clearButton = document.getElementById('clearButton');
+            nameTextBox = document.getElementById('nameTextBoxId');
+            statesSelect = document.getElementById('statesSelect');
+            outputSpan = document.getElementById('outputSpan');
+
+            loadSettings();
+            
+           
+        }
+
+        function loadSettings() {
+            var name = sessionStorage.getItem('name');
+            var state = sessionStorage.getItem('state');
+            nameTextBox.value = name;
+            statesSelect.value = state;
+        }
+
+        function clearSettings() {  
+              sessionStorage.clear();
+              loadSettings();
+              alert('storage cleared');
+        }
+        
+        function storeSettings() {
+              if (hasSessionStorage) {
+                    try {
+                        sessionStorage.setItem('name', nameTextBox.value);
+                        sessionStorage.setItem('state',  statesSelect.value);
+                        outputSpan.innerText = 'Settings Saved!';
+                    } catch(e) {
+                            alert('Storage quota exceeded');
+                    } 
+                }
+              else alert('No session storage support');
+        }
+        
+        function hasSessionStorage() {
+            return ('sessionStorage' in window && window['sessionStorage'] != null);
+        }
+    </script>
+</head>
+<body>
+    <h2>Name and State in Session Storage</h2>
+    <br />
+    Name: <input type="text" id="nameTextBoxId"/>
+    <br />
+    State: 
+    <select id="statesSelect">
+        <option>Pennsylvania</option>
+        <option>Ohio</option>
+        <option>Maryland</option>
+        <option>West Virginia</option>
+    </select>
+    <br />
+    <button id="submitButton" onclick="storeSettings()">Store Settings</button>&nbsp;&nbsp;
+    <button id="clearButton" onclick="clearSettings()">Clear Settings</button>
+    <br />
+    <span id="outputSpan"></span>
+    <script src="../../scripts/header.js"></script>
+  
+</body>
+</html>

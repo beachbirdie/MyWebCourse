@@ -1,0 +1,155 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flexbox Examples!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen" href="flexbox.css" />
+</head>
+
+<body>
+    <div class="container-1">
+        <div class="box-1">
+            <h2>Box 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat.</p>
+        </div>
+        <div class="box-2">
+            <h2>Box 2</h2>
+            <p>Tincidunt id aliquet risus feugiat in ante metus. Nunc id cursus metus aliquam eleifend mi in.</p>
+        </div>
+        <div class="box-3">
+            <h2>Box 3</h2>
+            <p>Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. At in tellus integer
+                feugiat. Ut sem nulla pharetra diam. Iaculis eu non diam phasellus vestibulum lorem. Velit ut tortor
+                pretium viverra suspendisse potenti nullam. Quis viverra nibh cras pulvinar mattis. Proin fermentum leo
+                vel
+                orci porta non pulvinar neque laoreet. Nec nam aliquam sem et tortor consequat id porta. Ipsum dolor
+                sit
+                amet consectetur adipiscing elit pellentesque habitant morbi. Volutpat actincidunt vitae semper quis
+                lectus
+                nulla at volutpat. Ut sem nulla pharetra diam. Iaculis eu non diam phasellus vestibulum lorem. Velit ut
+                tortor pretium viverra suspendisse potenti nullam. Quis viverra nibh cras pulvinar mattis.
+            </p>
+        </div>
+    </div>
+
+    <div class="container-2">
+        <div class="box">
+            <h2>Box 4</h2>
+            <pre> The div around these boxes has class=container-2, box styling
+                .container-2 > .box {
+                border: 1px solid red;
+                }                
+            </pre>
+            <p>The boxes start on the right of page because of <span>.container-2{justify-content: flex-end;}</span></p>
+        </div>
+        <div class="box">
+            <h2>Box 5</h2>
+            <pre>The container for these 3 boxes has styling
+                div[class*="container-"] {
+                display: flex;
+                }
+
+                .container-2 {
+                margin: 50px 0px;
+                justify-content: flex-end;
+                border: 4px dotted blue;
+                flex-wrap: wrap;
+                }
+            </pre>
+        </div>
+        <div class="box">
+            <h2>Box 6</h2>
+            <p>The box is here because <span>.container-2{flex-wrap: wrap}</span></p>
+        </div>
+    </div>
+
+
+    <div class="container-3">
+        <div class="box">
+            <h2>Box 7</h2>
+            <p>Ut sem nulla pharetra diam. Iaculis eu non diam phasellus vestibulum lorem. Velit ut tortor pretium
+                viverra suspendisse potenti nullam. Quis viverra nibh cras pulvinar mattis.</p>
+        </div>
+        <div class="box">
+            <h2>Box 8</h2>
+            <pre>The container for these boxes has styling 
+                    div[class*="container-"] {
+                        display: flex;
+                    }
+                    .container-3 {
+                        align-content: space-around;
+                        margin: 100px 0px;
+                        border: 4px dotted palevioletred;                
+                    }</pre>
+            <p>Proin fermentum leo vel orci porta non pulvinar neque laoreet. Nec nam aliquam sem et tortor consequat
+                id porta.</p>
+        </div>
+        <div class="box">
+            <h2>Box 9</h2>
+            <pre>These boxes look like this because of 
+                <span>.container-3 > .box {
+                    border: 1px solid burlywood;
+                    align-self: flex-end;
+                    margin: 20px 0px;
+                }</span>
+
+            </pre>
+
+        </div>
+        <div class="box">
+            <h2>Box 10</h2>
+            <p>Urna cursus eget nunc scelerisque viverra mauris in aliquam. Pellentesque dignissim enim sit amet
+                venenatis urna cursus eget. Molestie a iaculis at erat pellentesque adipiscing commodo elit.
+
+            </p>
+        </div>
+        <div class="box">
+            <h2>Box 11</h2>
+            <p>Nibh tortor id aliquet lectus proin nibh nisl condimentum. Mauris rhoncus aenean vel elit. Nunc non
+                blandit massa enim nec dui. Libero volutpat sed cras ornare arcu dui vivamus. Ultrices tincidunt arcu
+                non sodales neque sodales.</p>
+        </div>
+    </div>
+
+    <div class="container-4">
+        <div class="box-12">
+            <h2>Box 12</h2>
+        </div>
+        <div class="box-13">
+            <h2>Box 13</h2>
+        </div>
+        <div class="box-14">
+            <h2>Box 14</h2>
+        </div>
+    </div>
+
+    <div class="container-5">
+        <div class="box-15">
+            <h2>Box 15</h2>
+        </div>
+        <div class="box-16">
+            <h2>Box 16</h2>
+
+        </div>
+        <div class="box-17">
+            <h2>Box 17</h2>
+        </div>
+        <div class="box-18">
+            <h2>Box 18</h2>
+        </div>
+        <div class="box-19">
+            <h2>Box 19</h2>
+        </div>
+        <div class="box-20">
+            <h2>Box 20</h2>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

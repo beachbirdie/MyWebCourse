@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas 2D Example</title>
+</head>
+<body>
+	<canvas width="400" height="400" id="myCanvas">
+ 		 This appears if canvas is not supported
+	</canvas>
+	
+	<script>
+		var canvas = document.getElementById("myCanvas");
+		if (canvas.getContext) {
+			var context = canvas.getContext("2d");
+			context.fillStyle = "rgb(200,0,0)";
+			context.fillRect(10, 10, 100, 100);
+	
+			context.fillStyle = "rgb(0,200,0)";
+			context.fillRect(20, 20, 100, 100);
+			context.fillStyle = "rgb(0,0,200)";
+			context.fillRect(30, 30, 100, 100);
+		}
+		
+
+	</script>
+
+
+</body>
+</html>

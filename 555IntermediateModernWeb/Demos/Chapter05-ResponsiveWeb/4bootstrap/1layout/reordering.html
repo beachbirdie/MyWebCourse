@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap Reordering</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../scripts/bootstrap.min.css">
+    <style>
+        .col {
+            background-color: lightpink;
+            border: 1px  solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                First, but unordered
+            </div>
+            <div class="col order-12">
+                Second, but last
+            </div>
+            <div class="col order-1">
+                Third, but second
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="../../scripts/popper.min.js"></script>
+    <script src="../../scripts/bootstrap.min.js"></script>
+</body>
+
+</html>

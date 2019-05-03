@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="prototype.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        // Give $ back to prototype.js; create new alias to jQuery.
+        var $jq = jQuery.noConflict();
+    </script>
+
+
+    <!-- Using the $ inside an immediately-invoked function expression. -->
+    <script src="prototype.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+
+        jQuery.noConflict();
+
+        (function ($) {
+            // Your jQuery code here, using the $
+        })(jQuery);
+
+    </script>
+
+    <script src="jquery.js"></script>
+    <script src="prototype.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            // Your jQuery code here, using $ to refer to jQuery.
+        });
+
+    </script>
+
+    <script src="jquery.js"></script>
+    <script src="prototype.js"></script>
+    <script>
+
+        jQuery(function ($) {
+            // Your jQuery code here, using the $
+        });
+
+    </script>
+
+</body>
+
+</html>
