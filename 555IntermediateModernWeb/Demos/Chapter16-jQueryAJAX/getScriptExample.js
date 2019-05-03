@@ -1,1 +1,0 @@
-alert('Hi, I was loaded via a $.getScript() call');

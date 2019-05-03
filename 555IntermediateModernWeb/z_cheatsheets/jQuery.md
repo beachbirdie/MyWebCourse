@@ -1,2 +1,0 @@
-http://codylindley.com/jqueryselectors/
-

@@ -1,1 +1,0 @@
-let myFavoriteMusician = 'Les Claypool';
